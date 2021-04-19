@@ -1,21 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+/**
+ * Arquivo que será exibido no dispositivo (.tsx é typescript)
+ * Pegar os elementos visuais (Text) dentro do React native
+ * style é uma propriedade e dentro das chaves é um objeto de estilos
+ * O return pode retornar somente 1 elemento, não mais que isso
+ * Fragment usado para empacotar elementos
+ */
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+import React from 'react';
+import {Text, View, StyleSheet} from 'react-native';
+
+export default function App(){
+  /**
+   * <> é usado para fragmentar os returns em um único elemento
+   */
+  return ( 
+    <View style = {style.container}>
+      <Text>
+        Olá!
+      </Text>
+      <Text>
+        NLW#5
+      </Text>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+/**
+ * Criação de um objeto style para que todos os estilos do texto estejam mais organizados no objeto
+ */
+const style = StyleSheet.create({
+  container:{
+    flex: 1, // Mantém uma estrutura flexível para distância e tamanho dos objetos
+    justifyContent: 'center', 
+    alignItems: 'center'
+  }
+})
